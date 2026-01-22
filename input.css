@@ -1,0 +1,489 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Atlantic";
+    src: url("./assets/fonts/SverdlovskRegular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stolzl";
+    src: url("./assets/fonts/Stolzl-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stolzl Book";
+    src: url("./assets/fonts/Stolzl-Book.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stolzl";
+    src: url("./assets/fonts/Stolzl-Light.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stolzl";
+    src: url("./assets/fonts/Stolzl-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stolzl";
+    src: url("./assets/fonts/Stolzl-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Stolzl";
+    src: url("./assets/fonts/Stolzl-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SF-Pro-Display";
+    src: url("./assets/fonts/SFProDisplay-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "SF-Pro-Display";
+    src: url("./assets/fonts/SFProDisplay-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Sverdlovsk";
+    src: url("./assets/fonts/SverdlovskRegular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat Alternates";
+    src: url("./assets/fonts/MontserratAlternates-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+    width: 10rem;
+    text-align: center;
+    display: none;
+  }
+
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    background-color: rgba(237, 224, 204, 0.7);
+    bottom: 0;
+    padding: 0.6rem;
+    color: #000;
+    font-weight: 300;
+    font-family: "Montserrat";
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  .book-title {
+    font-family: "Sverdlovsk";
+    font-size: 4.25rem;
+    line-height: 3.25rem;
+    letter-spacing: 0.2562rem;
+    color: black;
+    font-weight: 400;
+    opacity: 1;
+    stroke: black;
+    -webkit-text-stroke: 0.0625rem black;
+  }
+
+  .book-subtitle {
+    font-family: "Montserrat";
+    font-size: 1.0625rem;
+    line-height: 1.275rem;
+    letter-spacing: 0.0437rem;
+    color: black;
+  }
+
+  .webkit-stroke-title {
+    -webkit-text-stroke: white;
+  }
+
+  .book-price {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.4375rem;
+    letter-spacing: 0.0625rem;
+    color: black;
+  }
+
+  .book-price-accent {
+    color: #8f2f2a;
+    font-weight: 300;
+    font-family: "Stolzl";
+    line-height: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 0.0625rem;
+  }
+
+  .book-currency {
+    color: #8f2f2a;
+  }
+
+  .book-btn {
+    font-family: "Sverdlovsk";
+    font-size: 2.6875rem;
+    line-height: 2rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    letter-spacing: 0.2562rem;
+    color: white;
+    padding: 0.875rem 3.9375rem 0.875rem 3.9375rem;
+    background-color: #8f2f2a;
+    -webkit-text-stroke: 0.0625rem white;
+  }
+
+  .book-img {
+    width: 36.25rem;
+    height: 36.25rem;
+  }
+
+  .book-regular {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.6875rem;
+  }
+
+  .book-large {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+  .sverdlovsk {
+    font-family: "Sverdlovsk";
+  }
+
+  .stolzl {
+    font-family: "Stolzl";
+  }
+
+  .yahei {
+    font-family: "Microsoft YaHei";
+  }
+
+  .montserrat {
+    font-family: "Montserrat";
+  }
+
+  .atlantic {
+    font-family: "Atlantic";
+  }
+
+  body {
+    font-family: "Stolzl";
+  }
+
+  .glide__slide {
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-shrink: 0;
+  }
+
+  .glide__slide li {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .webkit-stroke-name {
+    -webkit-text-stroke: 0.0625rem #565656;
+  }
+
+  h1 {
+    font-size: 7.5rem;
+    font-weight: 100;
+    opacity: 0.73;
+    color: white;
+    line-height: 100%;
+  }
+
+  .link {
+    font-family: "Stolzl Book";
+    color: white;
+    opacity: 0.73;
+    font-size: 2.0625rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .toggle-hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 2s ease;
+  }
+
+  .toggle-visible {
+    opacity: 1;
+    max-height: 2200px;
+    transition: all 2s ease;
+  }
+
+  @media (max-width: 450px) {
+    .book-img {
+      width: 25rem;
+      height: 25rem;
+    }
+
+    .book-title {
+      font-size: 3.125rem;
+      text-align: center;
+    }
+
+    .book-large {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .webkit-stroke-title {
+      -webkit-text-stroke: 0.0625rem white;
+    }
+
+    .webkit-stroke-name {
+      -webkit-text-stroke: 0.0625rem black;
+    }
+
+    .book-btn {
+      padding-left: 7.25rem;
+      padding-right: 7.25rem;
+      text-wrap: nowrap;
+    }
+
+    .book-price {
+      text-align: center;
+      font-size: 1.4375rem;
+      letter-spacing: 0.2375rem;
+    }
+
+    .book-price-accent {
+      text-align: center;
+      font-size: 1.4375rem;
+      letter-spacing: 0.2375rem;
+    }
+
+    h1 {
+      font-size: 4.375rem;
+      opacity: 0.8;
+    }
+
+    .title {
+      font-size: 1.125rem;
+    }
+
+    .subtitle {
+      font-size: 1.125rem;
+      font-weight: 200;
+      line-height: 1.25;
+    }
+
+    .regular {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .small {
+      font-size: 0.75rem;
+    }
+
+    .link-blue {
+      font-size: 1rem;
+    }
+
+    .glide__slide li {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+
+    .book-regular {
+      font-size: 1rem;
+    }
+  }
+}
+
+@layer components {
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+
+  .author {
+    font-family: "SF-Pro-Display";
+    font-weight: 400;
+    font-size: 1.3125rem;
+    color: rgba(91, 91, 91, 0.8);
+  }
+
+  .box-shadow-2-section-img {
+    box-shadow: 0 0.25rem 0.625rem 0.25rem rgba(0, 0, 0, 0.25);
+  }
+
+  .box-shadow-2-section {
+    box-shadow:
+      inset 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.25),
+      inset 0 -0.5rem 1rem 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .box-shadow-2-section-mob {
+    box-shadow:
+      inset 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25),
+      inset 0 -0.5rem 1rem 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .box-shadow-3-section {
+    box-shadow: inset 0 -0.25rem 1.25rem 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .quote {
+    font-family: "SF-Pro-Display";
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #5b5b5b;
+    line-height: 1.2;
+  }
+
+  .animated-element {
+    opacity: 0;
+    -webkit-transform: translateY(-15%);
+    -ms-transform: translateY(-15%);
+    transform: translateY(-15%);
+    -webkit-transition:
+      opacity 1s,
+      -webkit-transform 1s;
+    transition:
+      opacity 1s,
+      -webkit-transform 1s;
+    -o-transition:
+      transform 1s,
+      opacity 1s;
+    transition:
+      transform 1s,
+      opacity 1s;
+    transition:
+      transform 1s,
+      opacity 1s,
+      -webkit-transform 1s;
+  }
+
+  .animated-element.in-view {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  .shake-horizontal:hover {
+    -webkit-animation: shake-horizontal 6s linear both;
+    animation: shake-horizontal 6s linear both;
+  }
+
+  .scale-down-center:hover {
+    animation: scale-down-center 1s forwards;
+  }
+
+  @keyframes scale-down-center {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+
+  @media (min-width: 451px) {
+    @keyframes slide-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-4px);
+      }
+    }
+
+    @keyframes slide-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(4px);
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    .stolzl {
+      font-family: "Stolzl";
+    }
+  }
+}
+
+@layer utilities {
+  .decimal {
+    list-style-type: decimal;
+  }
+
+  @media screen and (max-width: 450px) {
+    .decimal {
+      line-height: 1.625rem;
+    }
+  }
+}
